@@ -1,335 +1,274 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kapil Yadav — Accounts Analyst</title>
-  <meta name="description" content="Kapil Yadav — Accounts Analyst | MBA | BCom (H) | Finance & Accounts Professional | GST, TDS, Income Tax, Tally, Busy, MIS"/>
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
-      --light-bg:#f8fafc; --light-card:#ffffff; --light-text:#0b1220; --light-muted:#475569;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,var(--bg),#061022);color:#e6eef6;-webkit-font-smoothing:antialiased}
-    .container{max-width:1100px;margin:28px auto;padding:28px}
-    .top{display:flex;align-items:center;gap:20px}
-    .avatar{width:112px;height:112px;border-radius:14px;background:linear-gradient(135deg,#0ea5a4,#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px;color:#021124;box-shadow:0 6px 18px rgba(2,9,20,0.6)}
-    .title h1{margin:0;font-size:28px}
-    .title p{margin:6px 0 0;color:var(--muted)}
-    .actions{margin-left:auto;display:flex;gap:8px}
-    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit;padding:8px 12px;border-radius:8px;cursor:pointer}
-    .primary{background:linear-gradient(90deg,var(--accent),#0891b2);color:#021124;border:none}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kapil Yadav | Finance & Accounts Portfolio</title>
 
-    .grid{display:grid;grid-template-columns:320px 1fr;gap:24px;margin-top:28px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,9,20,0.6)}
-    .section h3{margin:0 0 12px}
-    .muted{color:var(--muted);font-size:14px}
+<style>
+:root{
+  --primary:#0f172a;
+  --secondary:#1e293b;
+  --accent:#0ea5e9;
+  --text:#334155;
+  --muted:#64748b;
+  --bg:#f8fafc;
+  --card:#ffffff;
+}
 
-    /* Skills */
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:var(--glass);padding:6px 10px;border-radius:8px;font-size:13px}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Arial,sans-serif;}
+body{background:var(--bg);color:var(--text);line-height:1.6;}
 
-    /* Experience timeline */
-    .timeline{display:flex;flex-direction:column;gap:12px}
-    .item{display:flex;gap:12px}
-    .item .left{min-width:120px;color:var(--muted);font-size:13px}
-    .item .right h4{margin:0 0 6px}
-    .item .right p{margin:0;color:var(--muted)}
+.container{max-width:1100px;margin:auto;padding:40px 20px;}
 
-    /* Projects */
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-    .proj{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:10px}
-    .proj h4{margin:0 0 8px}
-    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-    .tag{font-size:12px;background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:6px}
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  padding:60px 20px;
+}
+.header-flex{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+.profile-pic{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid rgba(255,255,255,0.3);
+}
+header h1{font-size:42px;font-weight:700;}
+header p{font-size:18px;color:#cbd5e1;margin-top:10px;}
+header .tags{margin-top:20px;}
+header .tags span{
+  display:inline-block;
+  background:rgba(255,255,255,0.1);
+  padding:6px 12px;
+  border-radius:20px;
+  margin:4px;
+  font-size:14px;
+}
 
-    /* Contact */
-    .contact-list{display:flex;flex-direction:column;gap:8px}
-    a.link{color:var(--accent);text-decoration:none}
+section{margin-top:50px;}
+section h2{
+  font-size:28px;
+  color:var(--primary);
+  margin-bottom:20px;
+  border-left:5px solid var(--accent);
+  padding-left:12px;
+}
 
-    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:25px;
+  margin-bottom:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
 
-    /* responsive */
-    @media (max-width:880px){.grid{grid-template-columns:1fr}.avatar{width:84px;height:84px;font-size:26px}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
 
-    /* Light theme support */
-    :root.light{--bg:var(--light-bg);--card:var(--light-card);--muted:var(--light-muted);color:var(--light-text)}
-    body.light{background:var(--light-bg);color:var(--light-text)}
-    .toggle{display:inline-flex;align-items:center;gap:8px}
+ul{padding-left:18px;}
+li{margin-bottom:8px;}
 
-    /* small touches */
-    .meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px}
-    .download{display:inline-block;margin-top:10px}
-  </style>
+.badge{
+  display:inline-block;
+  background:#e0f2fe;
+  color:#0369a1;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:13px;
+  margin:4px 4px 0 0;
+}
+
+.footer{
+  margin-top:60px;
+  padding:30px;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
 </head>
+
 <body>
+
+<header>
   <div class="container">
-    <div class="top">
-      <div class="avatar"><img src="./pic.jpg" alt="Kapil Yadav" style="width:112px;height:112px;border-radius:14px;object-fit:cover;box-shadow:0 6px 18px rgba(2,9,20,0.6)"></div>
-      <div class="title">
+    <div class="header-flex">
+      <img src="pic.jpg" alt="Kapil Yadav" class="profile-pic">
+      <div>
         <h1>Kapil Yadav</h1>
-        <p class="muted">Accounts Analyst at Fluidech · MBA | BCom (H) · Finance & Accounts Professional</p>
-        <div class="meta" style="margin-top:10px">
-          <div>Gurugram, Haryana, India</div>
-          <div>•</div>
-          <div>Open to opportunities • 262 connections</div>
-        </div>
-      </div>
-
-      <div class="actions">
-        <a class="btn" href="https://www.linkedin.com/in/kapil-yadav-710323292/" target="_blank">LinkedIn</a>
-        <a class="btn" href="#contact">Contact</a>
-        <button class="btn primary" id="downloadBtn">Download CV</button>
-      </div>
+        <p>Accounts Analyst | Finance & Accounting Professional</p>
+        <p>Delhi NCR, India</p>
+        <p><a href="https://www.linkedin.com/in/kapilyadav09" target="_blank" style="color:#e0f2fe;text-decoration:none;font-weight:500;">LinkedIn: www.linkedin.com/in/kapilyadav09</a></p>
+        <div class="tags">
+      <span>Financial Accounting</span>
+      <span>GST & TDS</span>
+      <span>Income Tax</span>
+      <span>MIS Reporting</span>
+      <span>AS / Ind-AS</span>
+      <span>Retainership Services</span>
     </div>
-
-    <div class="grid">
-      <aside>
-        <div class="card">
-          <div class="section">
-            <h3>About</h3>
-            <p class="muted">Finance & Accounts Professional with hands-on experience in bookkeeping, statutory compliance, and finalization of accounts across multiple industries. I specialize in AS/IND-AS compliant financial statements, GST/TDS/Income Tax compliance, month-end closures, and MIS reporting. I work with Tally Prime, Busy and Advanced Excel to drive accurate and timely financial reporting.</p>
-            <a class="download link" href="/mnt/data/f0290803-6366-4f64-923e-b599d334c9d7.pdf" download>Download Resume</a>
-          </div>
-
-          <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
-
-          <div class="section">
-            <h3>Core Expertise</h3>
-            <ul class="muted" style="padding-left:18px;margin:8px 0">
-              <li>Finalization of Books (AS / IND-AS)</li>
-              <li>GST, TDS & Income Tax Return Filing</li>
-              <li>Monthly & Yearly Closures, Provisions & Adjustments</li>
-              <li>Day-to-Day Accounting & Ledger Scrutiny</li>
-              <li>Advanced Excel & MIS Reporting</li>
-              <li>Accounting Software: Tally Prime, Busy</li>
-            </ul>
-          </div>
-
-          <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
-
-          <div class="section">
-            <h3>Skills</h3>
-            <div class="skills" style="margin-top:8px">
-              <span class="skill">Tally Prime</span>
-              <span class="skill">Busy</span>
-              <span class="skill">Advanced Excel</span>
-              <span class="skill">GST Compliance</span>
-              <span class="skill">TDS</span>
-              <span class="skill">Income Tax</span>
-              <span class="skill">MIS Reporting</span>
-              <span class="skill">Financial Modelling</span>
-              <span class="skill">Journal Review</span>
-            </div>
-          </div>
-
-          <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)">
-
-          <div class="section">
-            <h3>Contact</h3>
-            <div class="contact-list">
-              <a class="link" href="https://www.linkedin.com/in/kapil-yadav-710323292/" target="_blank">LinkedIn • kapil-yadav-710323292</a>
-              <div class="muted">Email: ydvkapil09@gmail.com</div>
-              <div class="muted">Phone: +91 9821424493</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="height:16px"></div>
-
-        <div class="card">
-          <div class="section">
-            <h3>Education</h3>
-            <div class="timeline">
-              <div class="item">
-                <div class="left">Jul 2023 - Oct 2025</div>
-                <div class="right">
-                  <h4>Master of Business Administration — International Business</h4>
-                  <p class="muted">Manipal University Jaipur — Pursuing</p>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="left">Jun 2019 - Sep 2021</div>
-                <div class="right">
-                  <h4>BCom (H) — Accounting & Finance</h4>
-                  <p class="muted">Delhi University</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </aside>
-
-      <main>
-        <div class="card">
-          <div class="section">
-            <h3>Professional Summary</h3>
-            <p class="muted">Finance & Accounting Professional with hands-on experience in bookkeeping, statutory compliance, and finalization of accounts across multiple industries and client environments. I specialize in maintaining accurate books of accounts, preparing AS/IND-AS compliant financial statements, and executing GST, TDS & Income Tax compliances with precision and timeliness. With strong working knowledge of Tally Prime, Busy, and Advanced Excel, I bring a detail-oriented and process-driven approach to financial reporting. My career goal is to enhance financial efficiency and governance by ensuring data accuracy, timely reporting, and smooth compliance management.</p>
-          </div>
-
-          <div style="margin-top:18px"></div>
-
-          <div class="section">
-            <h3>Experience</h3>
-            <div class="timeline">
-
-              <div class="item">
-                <div class="left">Sep 2025 — Present</div>
-                <div class="right">
-                  <h4>Accounts Analyst — Fluidech</h4>
-                  <p class="muted">Gurugram, Haryana | Full-time
-                  <ul style="margin:8px 0 0 18px;color:var(--muted)">
-                    <li>Handling day-to-day accounting and ledger reviews for company operations.</li>
-                    <li>Assisting month-end closures and preparing reconciliations.</li>
-                    <li>Managing GST, TDS and Income Tax filings and statutory submissions.</li>
-                    <li>Preparing MIS reports for stakeholders and senior management.</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="left">Dec 2023 — Sep 2025</div>
-                <div class="right">
-                  <h4>Senior Executive — Eight Square Consulting</h4>
-                  <p class="muted">Gurugram, Haryana | Hybrid
-                  <ul style="margin:8px 0 0 18px;color:var(--muted)">
-                    <li>Account assistance for client bookkeeping using Tally/Busy.</li>
-                    <li>GST, TDS & Income Tax return filing and online statutory forms submission.</li>
-                    <li>Provided retainership services to Seasons Catering Services Pvt Ltd and NDTV Good Times.</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="left">Dec 2022 — Dec 2023</div>
-                <div class="right">
-                  <h4>Senior Executive — Sujeet Choudhary & Associates</h4>
-                  <p class="muted">Gurugram, Haryana
-                  <ul style="margin:8px 0 0 18px;color:var(--muted)">
-                    <li>Account assist for maintaining records in accounting software.</li>
-                    <li>Filing of GST, TDS and Income Tax returns.</li>
-                    <li>Online compliance activities and statutory documentation.</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="left">Sep 2019 — Nov 2022</div>
-                <div class="right">
-                  <h4>Taxation & Account Assistant — N.K. Bansal & Co., Chartered Accountants</h4>
-                  <p class="muted">New Delhi / Gurugram
-                  <ul style="margin:8px 0 0 18px;color:var(--muted)">
-                    <li>Record keeping and statutory compliances for clients.</li>
-                    <li>Assistance in audits, ledger scrutiny and bookkeeping.</li>
-                  </ul>
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div style="margin-top:18px"></div>
-
-          <div class="section">
-            <h3>Featured Projects</h3>
-            <div class="projects" style="margin-top:12px">
-              <div class="proj">
-                <h4>Month-end Closure Automation (Excel & Macros)</h4>
-                <p class="muted">Created standardized Excel templates & macros to accelerate month-end reconciliations and provisioning for recurring accounts, reducing closure time and manual errors.</p>
-                <div class="tags"><span class="tag">Excel</span><span class="tag">Macros</span><span class="tag">Reconciliation</span></div>
-              </div>
-
-              <div class="proj">
-                <h4>GST & TDS Compliance Process — Client Retainership</h4>
-                <p class="muted">Managed end-to-end GST/TDS filing for multiple clients (Seasons Catering Services Pvt Ltd, NDTV Good Times) as part of retainership services — ensuring timely filing and response to notices.</p>
-                <div class="tags"><span class="tag">GST</span><span class="tag">TDS</span><span class="tag">Compliance</span></div>
-              </div>
-
-              <div class="proj">
-                <h4>Accounting Systems Migration — Tally to Busy (Pilot)</h4>
-                <p class="muted">Assisted in transitioning client accounting records between Tally and Busy environments, including data mapping and validation to ensure continuity of accounting ledgers.</p>
-                <div class="tags"><span class="tag">Tally</span><span class="tag">Busy</span><span class="tag">Data Migration</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top:18px"></div>
-
-          <div class="section">
-            <h3>Certifications & Highlights</h3>
-            <ul class="muted" style="padding-left:18px;margin:8px 0">
-              <li>MBA — International Business (Pursuing) — Manipal University Jaipur</li>
-              <li>BCom (H) — Accounting & Finance — Delhi University</li>
-              <li>Handled retainership accounts for Seasons Catering Services Pvt Ltd & NDTV Good Times</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div style="height:16px"></div>
-
-        <div class="card" id="contact">
-          <h3>Get in Touch</h3>
-          <p class="muted">I'm open to collaborations, consulting requests and full-time opportunities in finance & accounts. Reach out via LinkedIn or share your email and I'll connect.</p>
-
-          <form onsubmit="event.preventDefault();sendContact()" style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
-            <input id="name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit">
-            <input id="email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit">
-            <textarea id="message" placeholder="Message" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit"></textarea>
-            <div style="display:flex;gap:8px">
-              <button class="btn primary" type="submit">Send message</button>
-              <button class="btn" type="button" id="themeToggle">Toggle theme</button>
-            </div>
-            <div id="formMsg" class="muted" style="margin-top:6px"></div>
-          </form>
-        </div>
-
-      </main>
-    </div>
-
-    <footer>
-      Made with care • Kapil Yadav — Accounts Analyst • <a class="link" href="https://www.linkedin.com/in/kapil-yadav-710323292/" target="_blank">LinkedIn</a>
-    </footer>
   </div>
+</header>
 
-  <script>
-    // Theme
-    const toggle = document.getElementById('themeToggle');
-    const downloadBtn = document.getElementById('downloadBtn');
-    function setLight(val){
-      if(val){document.documentElement.classList.add('light');document.body.classList.add('light')}else{document.documentElement.classList.remove('light');document.body.classList.remove('light')}
-      localStorage.setItem('light', !!val);
-    }
-    toggle.addEventListener('click', ()=>{setLight(!document.documentElement.classList.contains('light'))});
-    if(localStorage.getItem('light')==='true') setLight(true);
+<div class="container">
 
-    // Fake form submission (user should add email service)
-    function sendContact(){
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const msgEl = document.getElementById('formMsg');
-      if(!name || !email || !message){msgEl.textContent='Please fill all fields.';return}
-      msgEl.textContent='Thanks — this is a demo contact form. Please email me at ydvkapil09@gmail.com';
-      // In production, hook this to an email API or mailto link
-    }
+<section>
+<h2>Professional Summary</h2>
+<div class="card">
+Finance & Accounts Professional with experience across consulting and corporate environments, delivering end-to-end financial accounting review, statutory compliance, and MIS reporting. Strong exposure to month-end and year-end closures, AS / Ind-AS aligned finalization of accounts, and Indian taxation compliances including GST, TDS, and Income Tax. Proven ability to independently manage retainership engagements, audits, and stakeholder coordination while ensuring accuracy, compliance, and timely reporting.
+</div>
+</section>
 
-    // Download CV (demo)
-    downloadBtn.addEventListener('click', ()=>{
-      // Replace with real resume file URL
-      const url = '/mnt/data/f0290803-6366-4f64-923e-b599d334c9d7.pdf';
-      if(url==='#'){alert('Please add your resume URL in the HTML (replace the #) to enable download.');return}
-      const a=document.createElement('a');a.href=url;a.download='Kapil_Yadav_CV.pdf';document.body.appendChild(a);a.click();a.remove();
-    });
-  </script>
+<section>
+<h2>Core Competencies</h2>
+<div class="card grid">
+<ul>
+<li>End-to-End Financial Accounting & Book Finalization</li>
+<li>Month-End & Year-End Closures</li>
+<li>GST, TDS & Income Tax Compliance</li>
+<li>Ledger Scrutiny & Reconciliations</li>
+<li>Provisions & Adjustments</li>
+</ul>
+<ul>
+<li>MIS Reporting & Financial Analysis</li>
+<li>Retainership & Consulting Engagements</li>
+<li>Audit Coordination & Regulatory Support</li>
+<li>Process Improvement & Internal Controls</li>
+<li>Stakeholder & Client Management</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Technical Skills</h2>
+<div class="card">
+<span class="badge">Tally Prime</span>
+<span class="badge">BUSY</span>
+<span class="badge">Advanced Excel</span>
+<span class="badge">Pivot Tables</span>
+<span class="badge">MIS Automation</span>
+<span class="badge">GST Portal</span>
+<span class="badge">Income Tax Portal</span>
+<span class="badge">Statutory Documentation</span>
+</div>
+</section>
+
+<section>
+<h2>Professional Experience</h2>
+
+<div class="card">
+<h3>Accounts Analyst – Fluidech IT Services Pvt. Ltd.</h3>
+<p><strong>Sep 2025 – Present | Gurugram</strong></p>
+<ul>
+<li>Supporting end-to-end accounting operations including journal review, ledger scrutiny, and finalization of books.</li>
+<li>Managing month-end closures, provisions, and MIS preparation for management reporting.</li>
+<li>Ensuring compliance with GST, TDS, and Income Tax regulations in a corporate environment.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Senior Executive – Eight Square Consulting</h3>
+<p><strong>Dec 2023 – Sep 2025 | Gurugram</strong></p>
+<ul>
+<li>Delivered finance retainership services covering accounting review, statutory compliance, and MIS reporting.</li>
+<li>Handled multiple client engagements independently with ownership of accounting and compliance deliverables.</li>
+<li>Acted as finance SPOC for audits, consultants, and regulatory coordination.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Senior Executive – Accounts & Taxation – Sujeet Choudhary & Associates</h3>
+<p><strong>Dec 2022 – Dec 2023</strong></p>
+<ul>
+<li>Managed GST, TDS, and Income Tax compliances for diversified client portfolios.</li>
+<li>Supported statutory audits, assessments, and reconciliations.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Taxation & Accounts Assistant – N.K. Bansal & Co., Chartered Accountants</h3>
+<p><strong>Sep 2019 – Nov 2022</strong></p>
+<ul>
+<li>Executed bookkeeping, reconciliations, statutory filings, and audit support.</li>
+<li>Built strong foundation in accounting and taxation practices.</li>
+</ul>
+</div>
+
+</section>
+
+<section>
+<h2>Key Projects & Retainerships</h2>
+
+<div class="card">
+<h3>Seasons Group of Companies – End-to-End Financial Accounting Review, Statutory Compliance & MIS Reporting Transformation</h3>
+<p><strong>Dec 2023 – Jun 2025 | Associated with Eight Square Consulting</strong></p>
+<ul>
+<li>Executed complete finance and accounting review including end-to-end bookkeeping, general ledger management, and month-end/year-end closures with exposure to AS / Ind-AS.</li>
+<li>Managed GST, TDS, and Income Tax compliances covering return filings and reconciliations (GSTR-1, GSTR-3B, GSTR-2B), along with statutory documentation.</li>
+<li>Performed detailed ledger scrutiny, balance sheet and bank reconciliations to ensure accuracy and financial control.</li>
+<li>Delivered management-level MIS reports and financial analysis using Advanced Excel (Pivot Tables, Lookups, MIS automation).</li>
+<li>Improved reporting accuracy, streamlined accounting processes, and coordinated effectively with cross-functional teams and multiple client stakeholders using Tally Prime.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>NDTV GoodTimes – Retainership Services: Financial Accounting, Compliance & MIS</h3>
+<p><strong>Mar 2024 – Apr 2025 | Associated with Eight Square Consulting</strong></p>
+<ul>
+<li>Delivered end-to-end retainership finance support covering accounting review, statutory compliance, and management reporting.</li>
+<li>Oversaw the complete accounting cycle including journals, general ledger, trial balance, and finalization of accounts in accordance with applicable AS / Ind-AS.</li>
+<li>Managed month-end and year-end closures and supported preparation and review of P&L, Balance Sheet, and Cash Flow Statements.</li>
+<li>Ensured end-to-end compliance under GST, TDS, and Income Tax including GST return review (GSTR-1, GSTR-3B), reconciliation with GSTR-2B, TDS returns (24Q, 26Q), and reconciliation with Form 26AS.</li>
+<li>Prepared and reviewed monthly and quarterly MIS reports for senior management, including variance analysis, profitability review, working capital, and cash flow analysis.</li>
+<li>Strengthened internal controls, enhanced accounting and compliance processes, and acted as the key finance SPOC for auditors, consultants, and regulatory authorities.</li>
+<li>Worked extensively on Tally, BUSY, and Advanced Excel ensuring data integrity and audit readiness.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Wingreens Farms Private Limited – End-to-End Financial Accounting Review, Statutory Compliance & MIS Reporting Transformation</h3>
+<p><strong>Sep 2019 – Nov 2022 | Associated with N.K. Bansal & Co., Chartered Accountants</strong></p>
+<ul>
+<li>Executed complete finance and accounting review including end-to-end bookkeeping, general ledger management, and month-end/year-end closures with exposure to AS / Ind-AS.</li>
+<li>Managed GST, TDS, and Income Tax compliances including return filings, reconciliations (GSTR-1, GSTR-3B, GSTR-2B), and statutory documentation.</li>
+<li>Performed detailed ledger scrutiny, balance sheet and bank reconciliations, and coordinated statutory, internal, and tax audits.</li>
+<li>Delivered management-level MIS reports and financial analysis using Advanced Excel (Pivot Tables, Lookups, MIS automation).</li>
+<li>Ensured strong regulatory compliance, improved reporting accuracy, and streamlined accounting processes using Tally Prime and BUSY.</li>
+</ul>
+</div>
+
+</section>
+
+<section>
+<h2>Education & Certifications</h2>
+<div class="card">
+<p><strong>MBA (International Business)</strong> – Manipal University Jaipur </p>
+<p><strong>B.Com (Hons.) – Accounting & Finance</strong> – University of Delhi</p>
+<br>
+<p><strong>Certifications</strong></p>
+<ul>
+<li>International Business – University of Colorado Boulder</li>
+<li>Research Methodologies – Queen Mary University of London</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Career Objective</h2>
+<div class="card">
+To build a long-term career in a professionally managed MNC environment where I can contribute to financial governance, compliance excellence, and data-driven decision-making while continuously enhancing my technical and leadership capabilities.
+</div>
+</section>
+
+</div>
+
+<div class="footer">
+© 2026 Kapil Yadav | Finance & Accounts Portfolio
+</div>
+
 </body>
 </html>
